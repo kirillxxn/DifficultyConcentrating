@@ -29,7 +29,7 @@ body {
   border-bottom: 1px #FF0070 solid;
   border-left: 1px #FF0070 solid;
   position: absolute;
-  bottom: 0px;
+  bottom: 10px;
   left: 10px;
 }
 .rec_text {
@@ -110,7 +110,7 @@ body {
   text-align: left;
   color: #DB00FF;
   text-shadow: 4px 4px #FF0070;
-  margin-top: 15px;
+  margin-top: 17px;
 }
 
 .header_text {
@@ -138,7 +138,7 @@ body {
 
 .section_answers {
   display: grid;
-  margin-top: 11px;
+  margin-top: 9px;
   gap: 20px;
 
 }
@@ -221,7 +221,7 @@ body {
 .section_gallery {
   display: grid;
   gap: 10px;
-  margin-top: 50px;
+  margin-top: 52px;
   grid-auto-flow: row;
 }
 
@@ -267,7 +267,7 @@ body {
   border-top: 1px #FF0070 solid;
   border-right: 1px #FF0070 solid;
   right: 10px;
-  top: 10px;
+  top: 20px;
   position: absolute;
 }
 .footer::after{
@@ -278,7 +278,7 @@ body {
   border-bottom: 1px #FF0070 solid;
   border-left: 1px #FF0070 solid;
   position: absolute;
-  bottom: 10px;
+  bottom: 1px;
   left: 10px;
 }
 @media (min-width: 768px){
