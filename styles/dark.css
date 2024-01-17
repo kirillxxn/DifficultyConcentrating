@@ -1,12 +1,11 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --accent-color: #FF0070;
+  --title-head-color: #DB00FF;
+  --title-shadow-color: #FF0070;
+  --accent-text-color: #000028;
+  --accent-text-shadow-color: #FF0070;
+  --text-color: #F1B2CE;
+  --background-color: #000028;
+  --rec-display: inline-flex;
+  --hover-border-color: #FF007066;
 }

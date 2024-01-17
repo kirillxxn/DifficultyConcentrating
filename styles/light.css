@@ -1,8 +1,22 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
+/* @media (prefers-color-scheme: light) {
+    :root { 
+  --accent-color: #FFC2E6;
+  --text-and-shadow-color-rose: #fff;
+  --color-text-and-bg-black: #000028;
+  --text-color:#F1B2CE;
+  --white-rose-color: #FFC2E6;
+  
+    }
+} */
 .page.theme_light {
+    --accent-color: #353430;
+    --title-head-color:  #FFC2E6;
+    --title-shadow-color: #FF0070;
+    --accent-text-color: #353430;
+    --accent-text-shadow-color: #ff8dcb;
+    --text-color: #353430;
+    --background-color: #fff1f7;
+    --rec-display: none;
+    --hover-border-color: #32312D66;
+    background-image: url(/images/cover-image-light.png);
 }

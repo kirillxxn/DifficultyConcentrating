@@ -1,6 +1,12 @@
 :root{
---color-red-colar: #FF0070;
---color-purple: #DB00FF;
---color-navy-blue: #000028;
-
+--accent-color: #FF0070;
+--title-head-color: #DB00FF;
+--title-shadow-color: #FF0070;
+--accent-text-color: #000028;
+--accent-text-shadow-color: #FF0070;
+--text-color: #F1B2CE;
+--background-color: #000028;
+--rec-display: inline-flex;
+--font-family: 'IBM Plex Mono', monospace;
+--hover-border-color: #FF007066;
 }
