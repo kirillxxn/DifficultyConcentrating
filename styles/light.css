@@ -1,3 +1,4 @@
+/* Стили для светлой темы */
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: #353430;

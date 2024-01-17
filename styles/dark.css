@@ -1,3 +1,18 @@
+/* Стили для темной темы */
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #FF0070;
+    --title-head-color: #DB00FF;
+    --title-shadow-color: #FF0070;
+    --accent-text-color: #000028;
+    --accent-text-shadow-color: #FF0070;
+    --text-color: #F1B2CE;
+    --background-color: #000028;
+    --rec-display: inline-flex;
+    --hover-border-color: #FF007066;
+  }
+}
+
 .page.theme_dark {
   --accent-color: #FF0070;
   --title-head-color: #DB00FF;

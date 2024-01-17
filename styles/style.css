@@ -9,7 +9,9 @@ body {
 }
 
 /* Основные стили для мобильной версии */
+/* За основную взята темная тема */
 .page {
+  font-family: var(--font-family, 'IBM Plex Mono', monospace);
   background-image: url(../images/cover-image-dark.png);
   background-position: center center;
   background-size: cover;
@@ -18,14 +20,27 @@ body {
   box-sizing: border-box;
 }
 
+.head {
+  display: grid;
+  padding: 10px;
+  min-block-size: 100vh;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+
+}
+
+.header {
+  align-items: start;
+}
+
 .decorated-zone {
   position: relative;
 }
 
 .decorated-zone::before {
   content: "";
-  inline-size: 25px;
-  block-size: 25px;
+  inline-size: var(--decorated-size, 25px);
+  block-size: var(--decorated-size, 25px);
   border-block-start: 1px var(--accent-color, #FF0070) solid;
   border-inline-end: 1px var(--accent-color, #FF0070) solid;
   right: 10px;
@@ -36,8 +51,8 @@ body {
 .decorated-zone::after {
   content: "";
   display: block;
-  inline-size: 25px;
-  block-size: 25px;
+  inline-size: var(--decorated-size, 25px);
+  block-size: var(--decorated-size, 25px);
   border-block-end: 1px var(--accent-color, #FF0070) solid;
   border-inline-start: 1px var(--accent-color, #FF0070) solid;
   position: absolute;
@@ -70,19 +85,6 @@ body {
 
 }
 
-.head {
-  display: grid;
-  padding: 10px;
-  min-block-size: 100vh;
-  grid-template-rows: 1fr min-content 1fr;
-  align-items: center;
-
-}
-
-.header {
-  align-items: start;
-}
-
 .header__theme-menu {
   text-transform: lowercase;
 }
@@ -100,9 +102,9 @@ body {
 }
 
 .header__theme-menu-button {
-  font-family: var(--font-family, 'IBM Plex Mono', monospace);
-  font-size: 18px;
-  font-weight: 400;
+  font-family: inherit;
+  font-size: var(--font-size, 18px);
+  font-weight: var(--font-weight-normal, 400);
   line-height: 18px;
   letter-spacing: 0em;
   text-align: center;
@@ -123,9 +125,9 @@ body {
 }
 
 .header_title {
-  font-family: var(--font-family, 'IBM Plex Mono', monospace);
+  font-family: inherit;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold, 700);
   line-height: 96px;
   letter-spacing: 0em;
   text-align: left;
@@ -134,9 +136,9 @@ body {
 }
 
 .header_text {
-  font-family: var(--font-family, 'IBM Plex Mono', monospace);
-  font-size: 18px;
-  font-weight: 700;
+  font-family: inherit;
+  font-size: var(--font-size, 18px);
+  font-weight: var(--font-weight-bold, 700);
   line-height: 23px;
   letter-spacing: 0em;
   text-align: left;
@@ -163,9 +165,9 @@ body {
 }
 
 .nav_title {
-  font-family: var(--font-family, 'IBM Plex Mono', monospace);
-  font-size: 18px;
-  font-weight: 700;
+  font-family: inherit;
+  font-size: var(--font-size, 18px);
+  font-weight: var(--font-weight-bold, 700);
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
@@ -179,9 +181,9 @@ body {
 }
 
 .section_title {
-  font-family: var(--font-family, 'IBM Plex Mono', monospace);
-  font-size: 18px;
-  font-weight: 700;
+  font-family: inherit;
+  font-size: var(--font-size, 18px);
+  font-weight: var(--font-weight-bold, 700);
   line-height: 23px;
   letter-spacing: 0em;
   text-align: left;
@@ -189,9 +191,9 @@ body {
 }
 
 .section_text {
-  font-family: var(--font-family, 'IBM Plex Mono', monospace);
-  font-size: 18px;
-  font-weight: 400;
+  font-family: inherit;
+  font-size: var(--font-size, 18px);
+  font-weight: var(--font-weight-normal, 400);
   line-height: 23.4px;
   letter-spacing: 0em;
   text-align: left;
@@ -215,9 +217,9 @@ body {
 
 .section_subtitle {
   margin-block-start: 21px;
-  font-family: var(--font-family, 'IBM Plex Mono', monospace);
-  font-size: 18px;
-  font-weight: 400;
+  font-family: inherit;
+  font-size: var(--font-size, 18px);
+  font-weight: var(--font-weight-normal, 400);
   line-height: 23px;
   letter-spacing: 0em;
   text-align: left;
@@ -226,9 +228,9 @@ body {
 }
 
 .section_last_text {
-  font-family: var(--font-family, 'IBM Plex Mono', monospace);
-  font-size: 18px;
-  font-weight: 400;
+  font-family: inherit;
+  font-size: var(--font-size, 18px);
+  font-weight: var(--font-weight-normal, 400);
   line-height: 23.4px;
   letter-spacing: 0em;
   text-align: left;
@@ -244,13 +246,20 @@ body {
 }
 
 .gallery_title {
-  font-family: var(--font-family, 'IBM Plex Mono', monospace);
-  font-size: 18px;
-  font-weight: 700;
+  font-family: inherit;
+  font-size: var(--font-size, 18px);
+  font-weight: var(--font-weight-bold, 700);
   line-height: 23px;
   letter-spacing: 0em;
   text-align: left;
   color: var(--accent-text-color, #000028);
+}
+
+.gallery_list {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 10px;
 }
 
 .gallery_image {
@@ -261,12 +270,6 @@ body {
   inline-size: 100%;
 }
 
-.gallery_list {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-rows: 1fr;
-  gap: 10px;
-}
 
 .footer {
   padding: 10px;
@@ -322,6 +325,16 @@ body {
     padding-inline-start: 0px;
   }
 
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::after {
+    left: 20px;
+    bottom: 25px;
+  }
+
   .rec_text {
     margin-inline-end: 10px;
     margin-block-start: 10px;
@@ -340,10 +353,6 @@ body {
 
   }
 
-  .decorated-zone::after {
-    left: 20px;
-    bottom: 25px;
-  }
 
   .container {
     padding: 20px;
@@ -410,21 +419,18 @@ body {
     grid-area: street;
   }
 
-  .decorated-zone::before {
-    top: 20px;
-    right: 20px;
-  }
+
 }
 
 @media (min-width: 1024px) {
-  .header_title {
-    font-family: var(--font-family, 'IBM Plex Mono', monospace);
-    font-size: 157px;
-    font-weight: 700;
-    line-height: 130px;
-    letter-spacing: 0em;
-    text-align: left;
+  .decorated-zone::before {
+    right: 20px;
+    top: 20px;
+  }
 
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
   }
 
   .header__theme-menu-list {
@@ -435,15 +441,11 @@ body {
     margin-inline-start: 17px;
   }
 
-  .decorated-zone::before {
-    right: 20px;
-    top: 20px;
+  .header_title {
+    font-size: 157px;
+    line-height: 130px;
   }
 
-  .decorated-zone::after {
-    bottom: 20px;
-    left: 20px;
-  }
 
   .header_text {
     max-width: 491px;
