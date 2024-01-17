@@ -7,7 +7,8 @@ body {
   margin: 0 auto;
   padding: 0;
 }
-            /* Основные стили для мобильной версии */
+
+/* Основные стили для мобильной версии */
 .page {
   background-image: url(../images/cover-image-dark.png);
   background-position: center center;
@@ -75,7 +76,7 @@ body {
   min-block-size: 100vh;
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
-  
+
 }
 
 .header {
@@ -278,11 +279,13 @@ body {
   justify-content: center;
   min-block-size: 100vh;
 }
+
 /* Псевдоэлементы и псевдоклассы  */
 
-.header_title:last-child{
+.header_title:last-child {
   text-shadow: 2px 2px var(--title-shadow-color, #FF0070);
 }
+
 .header__theme-menu-button:hover {
   border-color: var(--hover-border-color, #FF007066);
 }
@@ -308,6 +311,7 @@ body {
 .section_link:focus {
   border: 1px var(--text-color, #F1B2CE) solid;
 }
+
 /* Начало адаптивного блока */
 @media (min-width: 768px) {
   .head {
@@ -341,6 +345,7 @@ body {
     left: 20px;
     bottom: 25px;
   }
+
   .container {
     padding: 20px;
   }
