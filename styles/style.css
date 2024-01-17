@@ -110,7 +110,6 @@ body {
   color: var(--accent-color, #FF0070);
   text-transform: lowercase;
   border: 1px solid transparent;
-  line-height: 18px;
   background: transparent;
   cursor: pointer;
   padding: 2px 12px;
