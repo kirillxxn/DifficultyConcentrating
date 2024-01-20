@@ -1,9 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-
-}
-
 /* Основные стили для мобильной версии */
 /* За основную взята темная тема */
 .page {
@@ -120,7 +114,7 @@
   pointer-events: none;
 }
 
-.header_title {
+.title {
   font-family: inherit;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: var(--font-weight-bold, 700);
@@ -148,11 +142,12 @@
 .container {
   display: grid;
   padding: 40px 10px;
+  gap: 51px;
 }
 
 .section_answers {
   display: grid;
-
+  gap: 20px;
 }
 
 .nav_title {
@@ -166,8 +161,14 @@
 
 }
 
+.section_title_subtitle {
+  display: grid;
+  gap: 20px;
+}
+
 .article_list {
   display: grid;
+  gap: 20px;
 
 }
 
@@ -179,7 +180,6 @@
   letter-spacing: 0em;
   text-align: left;
   color: var(--accent-text-color, #000028);
-  margin-block-start: 20px;
 }
 
 .section_text {
@@ -202,11 +202,10 @@
 
 .section_questions {
   display: grid;
-  margin-block-start: 49px;
+  gap: 20px;
 }
 
 .section_subtitle {
-  margin-block-start: 21px;
   font-family: inherit;
   font-size: var(--font-size, 18px);
   font-weight: var(--font-weight-normal, 400);
@@ -225,13 +224,12 @@
   letter-spacing: 0em;
   text-align: left;
   color: var(--text-color, #F1B2CE);
-  margin-block-start: 9.5px;
+  margin-block-start: 10.5px;
 }
 
 .section_gallery {
   display: grid;
   gap: 10px;
-  margin-block-start: 52px;
   grid-auto-flow: row;
 }
 
@@ -274,7 +272,7 @@
 
 /* Псевдоэлементы и псевдоклассы  */
 
-.header_title:last-child {
+.title:last-child {
   text-shadow: 2px 2px var(--title-shadow-color, #FF0070);
 }
 
@@ -316,7 +314,7 @@
     padding-inline-start: 0px;
   }
 
-  .header_title {
+  .title {
     font-size: var(--font-size-clamp, clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem));
   }
 
@@ -343,35 +341,24 @@
 
 
   .container {
-    padding: 20px;
+    padding: 60px 20px;
+    gap: 80px;
   }
 
   .section_answers {
-    margin-block-start: 20px;
-    grid-template-columns: 256px 1fr;
-  }
-
-  .section_questions {
-    margin-block-start: 60px;
+    grid-template-columns: 236px 1fr;
   }
 
   .nav_title {
     max-width: 236px;
-    margin-block-start: 20px;
   }
 
   .section_adviсe {
     display: grid;
-    grid-template-columns: 256px 1fr;
-  }
-
-  .section_last_text {
-    margin-inline-start: 2px;
+    grid-template-columns: 236px 1fr;
   }
 
   .section_gallery {
-    margin-block-start: 80px;
-    margin-block-end: 40px;
     gap: 20px;
 
   }
@@ -422,7 +409,7 @@
     margin-inline-start: 17px;
   }
 
-  .header_title {
+  .title {
     line-height: 130px;
   }
 
@@ -434,7 +421,7 @@
   }
 
   .section_answers {
-    grid-template-columns: 334px 1fr;
+    grid-template-columns: 314px 1fr;
   }
 
   .nav_title {
@@ -454,7 +441,7 @@
   }
 
   .section_adviсe {
-    grid-template-columns: 334px 1fr;
+    grid-template-columns: 314px 1fr;
   }
 
   .gallery_list_item {
