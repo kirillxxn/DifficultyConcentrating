@@ -5,7 +5,10 @@
 *::after {
   box-sizing: border-box;
 }
-
+html {
+  margin: 0 auto;
+  padding: 0;
+}
 body {
   min-inline-size: 375px;
   max-inline-size: 1440px;

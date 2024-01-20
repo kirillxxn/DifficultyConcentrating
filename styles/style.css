@@ -1,11 +1,7 @@
-html {
-  margin: 0 auto;
+* {
+  margin: 0;
   padding: 0;
-}
 
-body {
-  margin: 0 auto;
-  padding: 0;
 }
 
 /* Основные стили для мобильной версии */
@@ -23,14 +19,11 @@ body {
 .head {
   display: grid;
   padding: 10px;
-  min-block-size: 100vh;
+  min-block-size: 668px;
+  height: 100vh;
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
 
-}
-
-.header {
-  align-items: start;
 }
 
 .decorated-zone {
@@ -63,14 +56,18 @@ body {
 .rec_text {
   position: absolute;
   display: var(--rec-display, inline-flex);
+  font-family: var(--font-family, 'IBM Plex Mono', monospace);
+  font-size: var(--font-size, 18px);
+  font-weight: var(--font-weight-normal, 400);
   align-items: center;
   gap: 10px;
-  right: 18px;
-  top: 14px;
+  right: 17px;
+  top: 12px;
 }
 
 .rec_text::before {
-  content: "REC";
+  content: "rec";
+  text-transform: uppercase;
   color: var(--accent-color, #FF0070);
 }
 
@@ -93,7 +90,6 @@ body {
   text-align: right;
   display: grid;
   gap: 12px;
-  margin-block-start: 65px;
 }
 
 .header__theme-menu-item {
@@ -126,7 +122,7 @@ body {
 
 .header_title {
   font-family: inherit;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--font-size-clamp,clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
   font-weight: var(--font-weight-bold, 700);
   line-height: 96px;
   letter-spacing: 0em;
@@ -143,9 +139,6 @@ body {
   letter-spacing: 0em;
   text-align: left;
   color: var(--accent-text-color, #000028);
-  margin-inline-start: 2px;
-  margin-block-start: 55px;
-
 }
 
 .decorated {
@@ -154,13 +147,11 @@ body {
 
 .container {
   display: grid;
-  background-color: var(--background-color, #000028);
   padding: 40px 10px;
 }
 
 .section_answers {
   display: grid;
-  gap: 20px;
 
 }
 
@@ -188,6 +179,7 @@ body {
   letter-spacing: 0em;
   text-align: left;
   color: var(--accent-text-color, #000028);
+  margin-block-start: 20px;
 }
 
 .section_text {
@@ -199,7 +191,6 @@ body {
   text-align: left;
   color: var(--text-color, #F1B2CE);
   margin-block-start: 10px;
-  margin-block-end: 20px;
 
 }
 
@@ -211,8 +202,7 @@ body {
 
 .section_questions {
   display: grid;
-  margin-block-start: 30px;
-  gap: 19px;
+  margin-block-start: 49px;
 }
 
 .section_subtitle {
@@ -274,12 +264,12 @@ body {
 .footer {
   padding: 10px;
   position: relative;
-  background-color: var(--background-color, #000028);
   display: grid;
   grid-template-rows: repeat(1, 1fr);
   align-items: center;
   justify-content: center;
-  min-block-size: 100vh;
+  min-block-size: 668px;
+  height: 100vh;
 }
 
 /* Псевдоэлементы и псевдоклассы  */
@@ -298,6 +288,7 @@ body {
 }
 
 .header__theme-menu-button:focus {
+  outline: none;
   border-block-end: 1px var(--accent-color, #FF0070) solid;
 }
 
@@ -311,13 +302,12 @@ body {
 }
 
 .section_link:focus {
+  outline: none;
   border: 1px var(--text-color, #F1B2CE) solid;
 }
-
 /* Начало адаптивного блока */
 @media (min-width: 768px) {
   .head {
-    display: grid;
     padding: 20px;
   }
 
@@ -332,25 +322,18 @@ body {
 
   .decorated-zone::after {
     left: 20px;
-    bottom: 25px;
+    bottom: 20px;
   }
 
   .rec_text {
-    margin-inline-end: 10px;
-    margin-block-start: 10px;
-  }
-
-  .header__theme-menu-list {
-    margin-block-start: 170px;
-    margin-block-end: 180px;
+    margin-inline-end: 12px;
+    margin-block-start: 8px;
   }
 
   .header_text {
     display: flex;
     max-width: 364px;
     justify-self: end;
-    margin-block: 163px;
-
   }
 
 
@@ -359,21 +342,21 @@ body {
   }
 
   .section_answers {
-    margin-block-start: 40px;
-    grid-template-columns: 236px 1fr;
+    margin-block-start: 20px;
+    grid-template-columns: 256px 1fr;
   }
 
   .section_questions {
-    margin-block-start: 61px;
+    margin-block-start: 60px;
   }
 
   .nav_title {
     max-width: 236px;
+    margin-block-start: 20px;
   }
-
   .section_adviсe {
     display: grid;
-    grid-template-columns: 236px 1fr;
+    grid-template-columns: 256px 1fr;
   }
 
   .section_last_text {
@@ -388,7 +371,6 @@ body {
   }
 
   .gallery_list {
-    display: grid;
     grid-template-columns: repeat(3, minmax(0, auto));
     grid-template-rows: repeat(3, minmax(0, auto));
     gap: 20px;
@@ -423,26 +405,17 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .decorated-zone::before {
-    right: 20px;
-    top: 20px;
+  .head{
+    align-items: start;
   }
-
-  .decorated-zone::after {
-    bottom: 20px;
-    left: 20px;
-  }
-
   .header__theme-menu-list {
     display: flex;
     margin: 0px;
     justify-content: center;
-    margin-block-end: 275px;
     margin-inline-start: 17px;
   }
 
   .header_title {
-    font-size: 157px;
     line-height: 130px;
   }
 
@@ -454,7 +427,7 @@ body {
   }
 
   .section_answers {
-    grid-template-columns: 315px 1fr;
+    grid-template-columns: 334px 1fr;
   }
 
   .nav_title {
@@ -474,8 +447,7 @@ body {
   }
 
   .section_adviсe {
-    display: grid;
-    grid-template-columns: 315px 1fr;
+    grid-template-columns: 334px 1fr;
   }
 
   .gallery_list_item {
@@ -488,8 +460,6 @@ body {
   }
 
   .gallery_list {
-    display: grid;
-    gap: 20px;
     grid-template-columns: minmax(0px, auto) minmax(0px, auto) minmax(0px, auto);
     grid-template-rows: minmax(260px, auto) minmax(100px, auto) minmax(0px, auto);
   }
