@@ -16,8 +16,9 @@
   --decorated-size: 25px;
   --font-size-clamp: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
-@media (min-width: 1024px) {
-  :root{
-  --font-size-clamp: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+
+@media (min-width: 768px) {
+  :root {
+    --font-size-clamp: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
