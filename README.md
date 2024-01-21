@@ -5,7 +5,7 @@
 _____
 :white_circle: ***Ссылка на опубликованный проект в GitHub-Pages :arrow_right: https://kirillxxn.github.io/Project_Hard_to_Concentrate/***
 _____
-[url=https://postimg.cc/kBF7X01C][img]https://i.postimg.cc/kBF7X01C/2024-01-21-043447.png[/img][/url]
+[][]https://i.postimg.cc/kBF7X01C/2024-01-21-043447.png
 
 [url=https://postimg.cc/bZm81QfF][img]https://i.postimg.cc/bZm81QfF/2024-01-21-043500.png[/img][/url]
 
